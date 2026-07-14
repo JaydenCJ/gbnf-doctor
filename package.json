@@ -2,7 +2,7 @@
   "name": "gbnf-doctor",
   "version": "0.1.0",
   "description": "Grammar doctor for GBNF: lint llama.cpp grammars, test strings against them without loading a model, and convert JSON Schema to GBNF. Zero runtime dependencies, fully offline.",
-  "author": "JaydenCJ",
+  "author": "JaydenCJ <aisingioro.kiyon@gmail.com>",
   "license": "MIT",
   "type": "module",
   "bin": {
