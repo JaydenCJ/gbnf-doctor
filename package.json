@@ -1,0 +1,53 @@
+{
+  "name": "gbnf-doctor",
+  "version": "0.1.0",
+  "description": "Grammar doctor for GBNF: lint llama.cpp grammars, test strings against them without loading a model, and convert JSON Schema to GBNF. Zero runtime dependencies, fully offline.",
+  "author": "JaydenCJ",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "gbnf-doctor": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"tests/*.test.mjs\"",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "keywords": [
+    "gbnf",
+    "grammar",
+    "linter",
+    "json-schema",
+    "constrained-decoding",
+    "llm",
+    "cli"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenCJ/gbnf-doctor.git"
+  },
+  "homepage": "https://github.com/JaydenCJ/gbnf-doctor#readme",
+  "bugs": {
+    "url": "https://github.com/JaydenCJ/gbnf-doctor/issues"
+  }
+}

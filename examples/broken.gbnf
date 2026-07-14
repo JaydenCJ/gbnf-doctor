@@ -1,0 +1,11 @@
+# Deliberately broken: one grammar with the classic GBNF mistakes.
+# Run `gbnf-doctor lint examples/broken.gbnf` and compare with docs/rules.md.
+root ::= "result: " value " " flag
+value ::= obj | obj
+obj ::= "{" pair ( "," pair )* "}"
+pair ::= key ":" ws vlaue
+key ::= "\"" [a-z]* "\""
+ws ::= [ \t]*
+helper ::= "never used"
+expr ::= expr "+" term | term
+term ::= [0-9]

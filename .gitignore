@@ -1,0 +1,26 @@
+# --- dependencies ---
+node_modules/
+
+# --- build outputs ---
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+*.tgz
+
+# --- generated outputs from running the tool in this checkout ---
+*.generated.gbnf
+
+# --- env & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- caches / editor / OS ---
+.DS_Store
+.idea/
+.vscode/
+.cache/
+tmp/
+*.log

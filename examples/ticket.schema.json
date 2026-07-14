@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SupportTicket",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "priority": { "enum": ["low", "normal", "high", "urgent"] },
+    "tags": { "type": "array", "items": { "type": "string" }, "maxItems": 8 },
+    "resolved": { "type": "boolean" },
+    "assignee": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "team": { "enum": ["support", "engineering"] }
+      },
+      "required": ["name"]
+    }
+  },
+  "required": ["id", "title", "priority", "resolved"]
+}

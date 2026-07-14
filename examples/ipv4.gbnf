@@ -1,0 +1,4 @@
+# Exactly one dotted-quad IPv4 address, e.g. 127.0.0.1 or 192.168.0.1.
+# Each octet is 0-255; leading zeros are rejected ("01" does not match).
+root ::= octet "." octet "." octet "." octet
+octet ::= "25" [0-5] | "2" [0-4] [0-9] | "1" [0-9] [0-9] | [1-9] [0-9] | [0-9]
